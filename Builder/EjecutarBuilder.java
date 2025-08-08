@@ -4,11 +4,21 @@ public class EjecutarBuilder{
 
         Converter objConvASCII = new ASCIIConverter();
         Converter objConvPostScript = new PostScriptConverter();
+        Converter objConvPDF = new PDFConverter();
 
         Reader objLector1 = new Reader(objConvASCII);
 
         objLector1.parseInput("LINEA");
         objLector1.parseInput("PARRAFO");
+
+        Reader objLector2 = new Reader(objConvPDF);
+
+        objLector2.parseInput("TABLA");
+        objLector2.parseInput("PARRAFO");
+
+        Reader objLector3 = new Reader(objConvPS);
+
+        objLector3.parseInput("TABLA");
 
         
     }
